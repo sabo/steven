@@ -1,0 +1,40 @@
+body {
+    background-image: url("bg.png");
+    background-repeat: repeat;
+}
+p { 
+    font-family: 'Lato', sans-serif; 
+    text-shadow: 1px 1px #aaa;
+}
+header { 
+    font-family: 'Gafata'; 
+    text-shadow: 2px 2px #222;
+    text-align: center;
+    color: #fff;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header a:hover {
+    color: #aaa;
+}
+h2 { 
+    font-family: 'Gafata';
+}
+div #poem {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url("bg2.png");
+    background-repeat: repeat;
+}
+form {
+    font-family: 'Lato', sans-serif, bold;
+    text-shadow: 1px 1px #aaa;
+}
+
+

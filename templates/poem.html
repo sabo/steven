@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<div id="poem">
+<h2>A poem in the style of <a href="http://twitter.com/{{ poem.seed_user.username }}">
+        @{{ poem.seed_user.username }}</a> {% if poem.friends %} and friends
+    {%endif%}</h2>
+<p>
+{% for line in poem.lines %}
+<i>{{ line }}</i><br>
+{% endfor %}
+</p>
+<p>
+<audio controls autoplay>
+<source src={{ "/audio/{0}.mp3".format(poem.poem_id) }}>
+<source src={{ "/audio/{0}.ogg".format(poem.poem_id) }}>
+</audio>
+</p>
+<a href="/poems/{{ poem.poem_id }}">Permalink to this poem</a><br />
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var
+    js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+{% endblock %}

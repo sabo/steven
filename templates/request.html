@@ -1,0 +1,17 @@
+{% from "_formhelpers.html" import render_field %}
+{% extends "layout.html" %}
+{% block body %}
+<div id=poem>
+<p>
+All fields are optional. If you enter in a username that's not in my database,
+Steven will just pick one at random.
+<form method="POST" action="/">
+    <dl>
+        {{ render_field(form.username_request) }}
+        {{ render_field(form.haiku) }}
+        {{ render_field(form.friends) }}
+    </dl>
+    <input type=submit value="ART ME MOTHERFUCKER">
+    </p>
+</div>
+{% endblock %}
